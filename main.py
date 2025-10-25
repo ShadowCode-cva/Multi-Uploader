@@ -46,33 +46,33 @@ ADD_UPLOAD_NAME, ADD_UPLOAD_ENDPOINT, ADD_UPLOAD_API = range(3, 6)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Send welcome message"""
     welcome_msg = (
-        "👋 **Welcome to MultiUploaderX Pro**\n\n"
-        "Use /upload <drive_link> to start.\n"
-        "Use /help for all commands."
+        "👋 *Welcome to MultiUploaderX Pro*\n\n"
+        "Use /upload <drive\\_link> to start\\.\n"
+        "Use /help for all commands\\."
     )
-    await update.message.reply_text(welcome_msg, parse_mode='Markdown')
+    await update.message.reply_text(welcome_msg, parse_mode='MarkdownV2')
 
 # Help command
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Show all available commands"""
     help_text = (
-        "📚 **Available Commands:**\n\n"
-        "**General:**\n"
-        "/start - Welcome message\n"
-        "/help - Show this help\n"
-        "/upload <link> - Upload and shorten a link\n\n"
-        "**Shortener Management (Admin):**\n"
-        "/addshort - Add new shortener\n"
-        "/listshort - List all shorteners\n"
-        "/toggleshort <index> - Pause/Resume shortener\n"
-        "/removeshort <index> - Remove shortener\n\n"
-        "**Uploader Management (Admin):**\n"
-        "/addupload - Add new uploader\n"
-        "/listupload - List all uploaders\n"
-        "/toggleupload <index> - Pause/Resume uploader\n"
-        "/removeupload <index> - Remove uploader"
+        "📚 *Available Commands:*\n\n"
+        "*General:*\n"
+        "/start \\- Welcome message\n"
+        "/help \\- Show this help\n"
+        "/upload <link> \\- Upload and shorten a link\n\n"
+        "*Shortener Management \\(Admin\\):*\n"
+        "/addshort \\- Add new shortener\n"
+        "/listshort \\- List all shorteners\n"
+        "/toggleshort <index> \\- Pause/Resume shortener\n"
+        "/removeshort <index> \\- Remove shortener\n\n"
+        "*Uploader Management \\(Admin\\):*\n"
+        "/addupload \\- Add new uploader\n"
+        "/listupload \\- List all uploaders\n"
+        "/toggleupload <index> \\- Pause/Resume uploader\n"
+        "/removeupload <index> \\- Remove uploader"
     )
-    await update.message.reply_text(help_text, parse_mode='Markdown')
+    await update.message.reply_text(help_text, parse_mode='MarkdownV2')
 
 # Upload command
 async def upload(update: Update, context: ContextTypes.DEFAULT_TYPE):
